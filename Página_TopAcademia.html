@@ -11,10 +11,10 @@
         <nav id="navbar">
             <img id="imagem_navbar" src="img/Logo.png">
             <ul id="menu">
-                <li><button class="botao_navbar">CONTATO</button></li>
-                <li><button class="botao_navbar">PLANOS</button></li>
-                <li><button class="botao_navbar">ATIVIDADES</button></li>
-                <li><button class="botao_navbar">SOBRE</button></li>
+                <li><button id="botao_navbar_contato" class="botao_navbar">CONTATO</button></li>
+                <li><button id="botao_navbar_planos" class="botao_navbar">PLANOS</button></li>
+                <li><button id="botao_navbar_atividades" class="botao_navbar">ATIVIDADES</button></li>
+                <li><button id="botao_navbar_sobre" class="botao_navbar">SOBRE</button></li>
                 <li><button class="botao_navbar">HOME</button></li>
             </ul>
         </nav>
@@ -23,6 +23,7 @@
             <span id="span_home"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>
             <button id="botao_home" class="button">SAIBA MAIS !</button>
         </div>
+        <a href="#" id="location_sobre"></a>
     </section>
 
     <section id="Sobre" class="section_padrao">
@@ -36,6 +37,7 @@
     </section>
 
     <section id="Atividades" class="section_padrao">
+        <a href="#" id="location_atividades"></a>
         <h1 id="titulo_atividades">Atividades</h1>
         <div id="card_funcional">
             <div class="escurecer">
@@ -81,6 +83,7 @@
     </section>
 
     <section id="Planos" class="section_padrao">
+        <a href="#" id="location_planos"></a>
         <h1 id="titulo_planos">PLANOS</h1>
         <div id="card_mensal">
             <h2 class="tipos_plano">MENSAL</h2>
@@ -105,6 +108,7 @@
     </section>
 
     <section id="Contato">
+        <a href="#" id="location_contato"></a>
         <h1 id="titulo_contato">CONTATO</h1>
         <form>
             <div>
@@ -152,6 +156,38 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+        var sobre = document.getElementById("botao_navbar_sobre");
+        sobre.addEventListener('click', function() {
+            window.location.href = '#location_sobre';
+        });
+
+        var atividades = document.getElementById("botao_navbar_atividades");
+        atividades.addEventListener('click', function() {
+            window.location.href = '#location_atividades';
+        });
+
+        var planos = document.getElementById("botao_navbar_planos");
+        planos.addEventListener('click', function() {
+            window.location.href = '#location_planos';
+        });
+
+        var contato = document.getElementById("botao_navbar_contato");
+        contato.addEventListener('click', function() {
+            window.location.href = '#location_contato';
+        });
+
+        var saibaMais = document.getElementById("botao_home");
+        saibaMais.addEventListener('click', function() {
+            window.location.href = '#location_sobre';
+        });
+
+        var conhecaPlanos = document.getElementById("botao_sobre");
+        conhecaPlanos.addEventListener('click', function() {
+            window.location.href = '#location_planos';
+        });
+    </script>
 </body>
 
 </html>
